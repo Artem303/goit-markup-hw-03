@@ -13,7 +13,28 @@
 --Dairy: #FCFCFC ;
 --background-color: #E5E5E5;
 }
-
+h1,
+h2,
+h3,
+h4,
+p{
+margin-top: 0;
+margin-bottom: 0;
+}
+ol,ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+img{
+    display: block;
+}
+.list {
+    list-style: none;
+}
+.link {
+    text-decoration: none;
+}
 .page {
     background-color: #E5E5E5;
     font-family: "Roboto", sans-serif;
@@ -26,15 +47,29 @@ a {
 button {
     cursor: pointer;
 }
-ul {
-   list-style: none; 
+.container {
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-/* Хедер */
+
+/*------------------- Хедер---------------------------- */
+.page-header-container {
+display: flex;
+align-items: center;
+
+}
 .header {
     background-color: var(--WHITE);
 }
 
 .logo {
+margin-right: 77px;
+padding-top: 24px;
+padding-bottom: 24px;
+
     color: var(--IRIS);
     font-family: "Raleway", sans-serif ;
     font-weight: 800 ;
@@ -42,22 +77,29 @@ ul {
     line-height: 1.17 ;
     letter-spacing: 0.03em ;
     text-transform: uppercase ;
-    text-decoration: none
+    text-decoration: none;    
 }
 .logo > span {
     color: var(--NAVY-BLUE)
 }
+.header {
+    border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: hsla(234, 78%, 95%, 1);
+}
 
-/* Nav */ 
+/*---------------------Nav-------------------------- */ 
 
-
+.nav {
+display: flex;
+align-items: center;
+}
 .nav > .list .link {
     font-weight: 500 ;
     font-size: 16px ;
     line-height: 1.5 ;
     letter-spacing: 0.02em ;
     color: var(--NAVY-BLUE) ;
-    list-style: none;
 } 
 
 
@@ -65,12 +107,19 @@ ul {
 .nav > .list .link:focus {
     color: var(--OCEAN);
 }
-/* ADRESS */
+.menu {
+    display: flex;
+}
+.menu-item:not(:first-child) {
+margin-left: 40px;
+}
+/*----------------------- ADRESS ------------------*/
 .address {
-    font-style: normal
+    font-style: normal;
+   
 }
 .address > .list {
-    list-style: none
+    display: flex;
 }
 
 .address-list .link:hover,
@@ -83,22 +132,30 @@ line-height: 1.5 ;
 letter-spacing: 0.02em ;
 color: var(--SLATE);
 }
-/* MAIN */
+.address {
+    margin-left: auto;
+}
+.address-link:not(:last-child) {
+    margin-right: 40px;
+}
+/* ---------------------------MAIN ---------------------*/
 .hero {
     background-color: var(--NAVY-BLUE) ;
     color: var(--WHITE) ; 
-
+display: flex;
+flex-direction: column;
 }
 .hero > .title {
     font-size: 56px ;
-    line-height: 1.07 ;
-    font-family: 'Roboto' ;
+    line-height: 1.07 ; 
     text-align: center ;
     letter-spacing: 0.02em
 }
 
 .btn-hero {
-    font-family: "Roboto", sans-serif ;
+border-radius: 4px;
+padding: 16px 32px;
+
     font-weight: 500 ;
     font-size: 16px ;
     line-height: 1.5 ;
@@ -112,7 +169,19 @@ color: var(--SLATE);
 .btn-hero:focus {
    background-color: var(--OCEAN);
 }
-/* description */
+.btn-hero {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 48px ;
+    margin-bottom: 188px;
+}
+.title {
+    margin-top: 188px;
+    margin-right: auto;
+        margin-left: auto;
+        width: 496px;
+}
+/* ------------------description -----------------------*/
 .description, .features {
     background-color: #E5E5E5;
 }
@@ -129,7 +198,20 @@ color: var(--SLATE);
     line-height: 1.5;
     color: var(--SLATE);
 }
-/* features */
+.description > .container {
+    display: flex;
+}
+
+.description-list {
+    display: flex;
+}
+.description-item:not(:last-child) {
+    margin-right: 24px;
+}
+.description{
+    padding-top: 120px;
+}
+/* ----------------------------features --------------------*/
 .features-title, .team-title {
     text-align: center ;
     font-size: 36px ;
@@ -138,9 +220,23 @@ color: var(--SLATE);
     text-transform: capitalize ;
     color: var(--GREY);
 }
-/* Team */
+
+.features-title {
+    margin-bottom: 72px;
+}
+.features-item:not(:last-child) {
+    margin-right: 24px;
+}
+.features-list {
+    display: flex;
+}
+.features {
+    padding-top: 120px;
+        padding-bottom: 120px;
+}
+/* -------------------------Team ---------------------------*/
 .team {
-    background-color: #F4F4FD;;
+    background-color: var(--CLOUD);
 }
 .team-subtitle {
     font-weight: 500 ;
@@ -149,14 +245,37 @@ color: var(--SLATE);
     letter-spacing: 0.02em ;
     color: var(--GREY);
 }
-.team-item {
+.team-text {
     letter-spacing: 0.02em;
     font-size: 16px;
     line-height: 1.5;
 color: var(--SLATE);
 }
 
-/* Footer */    
+.team-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.team-title {
+    margin-bottom: 72px;
+}
+.team-list {
+ 
+}
+
+.team-item {
+    background-color: var(--WHITE);
+}
+.team-subtitle, .team-text {
+    text-align: center;
+}
+.team {
+    padding-top: 120px;
+        padding-bottom: 120px;
+}
+/*------------------------- Footer----------------------- */    
 .footer {
     background-color: var(--NAVY-BLUE)
 }
@@ -169,7 +288,18 @@ color: var(--SLATE);
         line-height: 1.5;
         color: #F4F4FD ;
 }
-/* PROJECT PORTFOLIO */
+.footer > .container {
+    display: flex;
+    flex-direction: column;
+   padding-top: 100px;
+   padding-bottom: 100px;
+    
+}
+.footer-text {
+    width: 264px;
+}
+
+/* ------------------PROJECT PORTFOLIO -------------------*/
 .filter-list {
     list-style: none;
     font-family: "Roboto", sans-serif ;
@@ -181,7 +311,7 @@ color: var(--SLATE);
     
 }
 .btn-filter {
-    font-family: "Roboto", sans-serif;
+   
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -208,3 +338,29 @@ color: var(--NAVY-BLUE);
     letter-spacing: 0.02em ;
     color: var(--SLATE);
 }   
+.project {
+    padding-bottom: 120px;
+}
+/* -----------------BTN-FILTER-FLEX--------------- */
+.btn-list {
+    display: flex;
+justify-content: center ;
+margin-bottom: 92px;
+}
+.btn-list-item:not(:last-child) {
+    margin-right: 24px;
+}
+.btn-filter {
+    padding: 12px 24px;
+    border-radius: 4px;
+}
+.project {
+    padding-top: 96px;
+}
+/* -----------------PROJECT-LIST-FLEX--------------- */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
