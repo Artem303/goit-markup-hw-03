@@ -144,6 +144,8 @@ color: var(--SLATE);
     color: var(--WHITE) ; 
 display: flex;
 flex-direction: column;
+width: 1440px;
+height: 600px;
 }
 .hero > .title {
     font-size: 56px ;
@@ -169,6 +171,7 @@ padding: 16px 32px;
 .btn-hero:focus {
    background-color: var(--OCEAN);
 }
+
 .btn-hero {
     margin-right: auto;
     margin-left: auto;
@@ -180,10 +183,10 @@ padding: 16px 32px;
     margin-right: auto;
         margin-left: auto;
         width: 496px;
-}
+} 
 /* ------------------description -----------------------*/
 .description, .features {
-    background-color: #E5E5E5;
+    background-color: var(--WHITE);
 }
 .description-subtitle {
     font-weight: 500 ;
@@ -273,7 +276,12 @@ color: var(--SLATE);
 }
 .team {
     padding-top: 120px;
-        padding-bottom: 120px;
+        padding-bottom: 120px;        
+}
+.inner-team {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 16px;
 }
 /*------------------------- Footer----------------------- */    
 .footer {
@@ -310,17 +318,25 @@ color: var(--SLATE);
     color:var(--IRIS) ;
     
 }
+.project {
+    background-color:var(--WHITE);
+}
 .btn-filter {
-   
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--IRIS);
+
+    padding: 12px 24px;
+    border-radius: 4px;
+    border-color: hsla(234, 78%, 95%, 1);
+    background-color: hsla(240, 69%, 97%, 1);
 }
 .btn-filter:hover,
 .btn-filter:focus{
     background-color: var(--OCEAN);
+    color: var(--WHITE);
 }
 .project-link {
     text-decoration: none
@@ -350,10 +366,7 @@ margin-bottom: 92px;
 .btn-list-item:not(:last-child) {
     margin-right: 24px;
 }
-.btn-filter {
-    padding: 12px 24px;
-    border-radius: 4px;
-}
+
 .project {
     padding-top: 96px;
 }
@@ -364,3 +377,10 @@ margin-bottom: 92px;
     row-gap: 48px;
     column-gap: 24px;
 }
+.inner-project-card {
+    display: flex;
+   flex-direction: column;
+   margin-top: 32px;
+   margin-bottom: 32px; 
+}
+
