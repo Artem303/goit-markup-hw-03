@@ -140,16 +140,19 @@ color: var(--SLATE);
 }
 /* ---------------------------MAIN ---------------------*/
 .hero {
-    background-color: var(--NAVY-BLUE) ;
+    background-color: var(--WHITE) ;
     color: var(--WHITE) ; 
-display: flex;
+}
+.hero > .container {
+    display: flex;
 flex-direction: column;
 width: 1440px;
-height: 600px;
-padding-bottom: 188px;
-padding-top: 188px;
+    height: 600px;
+    padding-bottom: 188px;
+    padding-top: 188px;
+    background-color: var(--NAVY-BLUE)
 }
-.hero > .title {
+.hero-title {
     font-size: 56px ;
     line-height: 1.07 ; 
     text-align: center ;
@@ -361,6 +364,24 @@ color: var(--NAVY-BLUE);
 .project {
     padding-bottom: 120px;
 }
+/* -----------------PROJECT-LIST-FLEX--------------- */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.inner-project-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.project-title {
+    margin-bottom: 8px;
+}
 /* -----------------BTN-FILTER-FLEX--------------- */
 .btn-list {
     display: flex;
@@ -373,21 +394,5 @@ margin-bottom: 92px;
 
 .project {
     padding-top: 96px;
-}
-/* -----------------PROJECT-LIST-FLEX--------------- */
-.project-list {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 48px;
-    column-gap: 24px;
-}
-.inner-project-card {
-    display: flex;
-   flex-direction: column;
-   margin-top: 32px;
-   margin-bottom: 32px; 
-}
-.project-title {
-    margin-bottom: 8px;
 }
 
