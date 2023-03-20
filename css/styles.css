@@ -147,6 +147,7 @@ flex-direction: column;
 width: 1440px;
 height: 600px;
 padding-bottom: 188px;
+padding-top: 188px;
 }
 .hero > .title {
     font-size: 56px ;
@@ -183,7 +184,6 @@ border: none;
      */
 }
 .title {
-    margin-top: 188px;
     margin-right: auto;
         margin-left: auto;
         width: 496px;
